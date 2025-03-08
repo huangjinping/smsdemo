@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/edt_insert_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号码"
+            android:inputType="phone"></EditText>
+
+
+        <EditText
+            android:id="@+id/edt_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入条数"
+            android:inputType="phone"></EditText>
+
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="插入短信"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="53dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/edt_delete_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入要删除手机号码"
+            android:inputType="phone"></EditText>
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除指定短信"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="53dp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+</LinearLayout>
