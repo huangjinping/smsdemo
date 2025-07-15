@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.provider.Telephony;
 import android.text.TextUtils;
 import android.util.Log;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         binding.edtCount.setText("10");
         binding.edtDeleteNumber.setText("123456789");
         checkAndRequestSmsRole();
+
 //        checkDefaultSmsApp2();
 
         binding.button.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
                                 String message = System.currentTimeMillis() + "Hello, this is a test mHello, this is a test message!Hello, this is a test message!Hello, this is a test message!Hello, this is a test message!Hello, this is a test message!essage!" + i;
 
+                                 message = binding.edtContent.getText().toString().trim();
+                                if (TextUtils.isEmpty(message)){
+                                    Toast.makeText(MainActivity.this, "请输入短信", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+                                
                                 writeSmsToSentBox(phone, message);
 
                                 writeSmsToSentBoxWithDate(phone, message, "2025-03-01 14:30:00");

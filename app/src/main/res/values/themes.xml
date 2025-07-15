@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Smsdemo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -6,4 +6,22 @@
     </style>
 
     <style name="Theme.Smsdemo" parent="Base.Theme.Smsdemo" />
+
+    <!-- res/values/themes.xml -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- 背景颜色（必须不透明） -->
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+
+        <!-- 中心图标（支持静态/动态图标） -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_splash_logo</item>
+
+        <!-- 动画时长（毫秒，仅对动态图标有效） -->
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+
+        <!-- 图标背景（可选，增强对比度） -->
+        <item name="windowSplashScreenIconBackgroundColor">@color/icon_background</item>
+
+        <!-- 后续 Activity 的主题 -->
+        <item name="postSplashScreenTheme">@style/Theme.Smsdemo</item>
+    </style>
 </resources>
